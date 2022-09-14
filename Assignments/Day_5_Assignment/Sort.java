@@ -1,10 +1,10 @@
 import java.util.Comparator;
 
-public class Sort implements Comparator <Employee>{
+public class Sort implements Comparator <Pair>{
 	
 	@Override
-	public int compare(Employee employee1, Employee employee2) {
-		return (int)(employee1.getEmpBasicSalary() - employee2.getEmpBasicSalary());
+	public int compare(Pair pair1, Pair pair2) {
+		return (int)(pair1.getSalary() - pair2.getSalary());
 	}
 	
 }

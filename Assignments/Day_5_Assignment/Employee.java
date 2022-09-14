@@ -12,7 +12,6 @@ public class Employee {
 		this.empName = empName;
 		this.empDept = empDept;
 		this.empBasicSalary = empBasicSalary;
-
 	}
 	
 	public static List<String> searchEmployees(Employee employees[], String empDept){
@@ -33,12 +32,12 @@ public class Employee {
 		int i;
 		Pair pairs[] = new Pair[5];
 		
-		Arrays.sort(employees, new Sort());
-		
 		for(i=0;i<5;++i) {
-			pairs[i] = new Pair(employees[i].getEmpName(), employees[i].getEmpBasicSalary());
+			pairs[i] = new Pair(employees[i].getEmpName(), employees[i].getGrossSalary());
 		}
 		
+		Arrays.sort(pairs, new Sort());
+	
 		return pairs;
 	}
 	
@@ -54,7 +53,8 @@ public class Employee {
 	}
 	
 	public double getGrossSalary() {
-		return this.empBasicSalary + 0.12 * this.empBasicSalary + 0.08 * this.empBasicSalary;
+		this.empGrossSalary = this.empBasicSalary + 0.12 * this.empBasicSalary + 0.08 * this.empBasicSalary;
+		return this.empGrossSalary;
 	}
 	
 	public int getEmpId() {
@@ -72,10 +72,6 @@ public class Employee {
 	
 	public double getEmpBasicSalary() {
 		return this.empBasicSalary;
-	}
-	
-	public double getEmpGrossSalary() {
-		return this.empGrossSalary;
 	}
 	
 }
