@@ -8,6 +8,7 @@ public class Resource {
 	public void increment() {
 		int i;
 		
+		//a common lock of current instance shared by the threads
 		synchronized(this) {
 			System.out.println("Increment: " + " " + Thread.currentThread().getName());
 			for(i=1;i<=3;++i) {
@@ -27,6 +28,7 @@ public class Resource {
 	public void decrement() {
 		int i;
 		
+		//a common lock of current instance shared by the threads
 		synchronized(this) {
 			System.out.println("Decrement: " + " " + Thread.currentThread().getName());
 			for(i=3;i>=1;--i) {

@@ -9,6 +9,7 @@ public class Access {
 	//the execution of previous method
 	
 	private int val1=0,val2=0;
+	//different locks
 	private Object lock1 = new Object();
 	private Object lock2 = new Object();
 	
