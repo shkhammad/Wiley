@@ -1,6 +1,5 @@
 package com.annotations;
 
-@Simple(place = "Mumbai")
 public class Main {
 	public static void main(String[] args) {
 		
